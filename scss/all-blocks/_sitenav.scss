@@ -1,0 +1,44 @@
+.wrapper-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-left-menu {
+    margin: auto 0;
+    width: 70%;
+    max-height: 700px;
+    height: 100%;
+}
+
+.menu-title {
+    text-align: left !important;
+    font-size: 40px;
+}
+
+.menu-lists {
+    margin: auto 0;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.menu-item , .header-actions-title {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: rgb(170, 168, 174);
+    border-bottom: 1px solid  rgb(170, 168, 174);
+    border-width: 50%;
+
+}
+
+.menu-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

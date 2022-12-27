@@ -1,3 +1,56 @@
 .main {
     flex-grow: 1;
+    padding-top: 150px;
+    background-color: #b5e7fd;
+    padding-bottom: 30px;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #4b587c;
+    width: 30vw;
+    height: 100%;
+}
+
+.wrapper-left-logo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 4rem;
+    font-size: 45px;
+}
+
+.wrapper-right {
+    margin-left: auto;
+    height: 100%;
+    max-width: 69.999999vw;
+}
+
+.wrapper-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+
+@media only screen and (max-width: 1000px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+    
+    .wrapper-left {
+        display: none;
+    }
+
+    .wrapper-right {
+       margin: 0;
+        height: 100%;
+        max-width: 100vw;
+    }
 }

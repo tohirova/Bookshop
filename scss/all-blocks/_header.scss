@@ -1,0 +1,75 @@
+.header {
+    padding: 20px 0;
+    background-color: #5183a7;
+    position: fixed;
+    width: 70%;
+    margin-left: auto;
+}
+
+.header-hamburger{
+    display: none;
+}
+
+.header-sum {
+    font-size: 20px;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+.header-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-actions-title {
+    margin-right: 20px;
+}
+
+.header-sum {
+    max-width: 300px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .header-hamburger {
+        border: 1px solid black;
+        padding: 5px;
+        display: block;
+    }
+    
+    .header {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .header-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-actions {   
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .header-actions-title {
+        display: none;
+    }
+
+    .header-sum {
+        margin-top: 10px;
+    }
+}

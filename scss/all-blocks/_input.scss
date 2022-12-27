@@ -1,0 +1,49 @@
+input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.seach {
+    max-width: 400px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.filter-input {
+    margin-bottom: 30px;
+}
+
+
+
+@media only screen and (max-width: 645px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .seach {
+        max-width: 280px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .seach {
+        max-width: 200px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .seach {
+        max-width: 150px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}

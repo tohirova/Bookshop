@@ -1,0 +1,43 @@
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #54acde;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:active {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cancel-btn {
+    display: none;
+}
+
+.cancel-btn:hover {
+    opacity: 0.8;
+}
+
+
+
+button:hover {
+    background-color: #52758a;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+    .cancel-btn {
+        display: block;
+    }
+    
+}
+
+
+@media only screen and (max-width: 370px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .seach-button {
+        padding: 5px 10px !important;
+    }
+}
