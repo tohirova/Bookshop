@@ -91,10 +91,10 @@ getCard(data);
 
 
 // total price of the books
-const getTotalPrice = () => {
-  let tprice = document.getElementById('headerSum');
-  tprice.innerHTML = `Total price: ${data.reduce((acc, el) => acc + +el.price, 0)} so'm`;
+let tprice = document.getElementById('headerSum');
 
+const getTotalPrice = () => {
+  tprice.innerHTML = `Total price: ${data.reduce((acc, el) => acc + +el.price, 0)} so'm`;
 };
 getTotalPrice();
 
@@ -106,6 +106,7 @@ searchButton.addEventListener("click", function () {
   let new_products = data.filter((book) =>
     book.title.toLowerCase().includes(search.value)
   );
+  tprice.innerHTML = `Total price: ${new_products.reduce((acc, el) => acc + +el.price, 0)} so'm`;
 
   getCard(new_products);
 
@@ -121,6 +122,7 @@ const filterCheep = document.getElementById('cheep');
 const filterMiddle = document.getElementById('middle');
 
 filterAll.addEventListener('click', ()=> {
+  tprice.innerHTML = `Total price: ${data.reduce((acc, el) => acc + +el.price, 0)} so'm`;
   getCard(data);
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
@@ -130,6 +132,8 @@ filterExpensive.addEventListener('click', ()=> {
   let expensiveProducts = data.filter((book) =>
     book.status.includes('expensive')
   );
+
+  tprice.innerHTML = `Total price: ${expensiveProducts.reduce((acc, el) => acc + +el.price, 0)} so'm`;
 
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
@@ -142,18 +146,21 @@ filterCheep.addEventListener('click', ()=> {
     book.status.includes('cheep')
   );
 
+  tprice.innerHTML = `Total price: ${cheapProducts.reduce((acc, el) => acc + +el.price, 0)} so'm`;
+
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
   getCard(cheapProducts);
 })
 
 filterMiddle.addEventListener('click', ()=> {
-  let cheapProducts = data.filter((book) =>
+  let middleProducts = data.filter((book) =>
     book.status.includes('middle')
   );
+  tprice.innerHTML = `Total price: ${middleProducts.reduce((acc, el) => acc + +el.price, 0)} so'm`;
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
-  getCard(cheapProducts);
+  getCard(middleProducts);
 });
 
 // Filter the books by its price
@@ -166,6 +173,7 @@ minButton.addEventListener('click', ()=> {
   let minPrice = data.filter((book) =>
     book.price < Number(filterInput.value)
   );
+  tprice.innerHTML = `Total price: ${minPrice.reduce((acc, el) => acc + +el.price, 0)} so'm`;
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
   
@@ -176,6 +184,7 @@ maxButton.addEventListener('click', ()=> {
   let maxPrice = data.filter((book) =>
     book.price > Number(filterInput.value)
   );
+  tprice.innerHTML = `Total price: ${maxPrice.reduce((acc, el) => acc + +el.price, 0)} so'm`;
   menu.classList.remove('show');
   menu.classList.add('wrapper-left')
   if(maxPrice.length > 0){
