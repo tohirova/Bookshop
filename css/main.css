@@ -72,8 +72,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -346,18 +345,18 @@ img {
 .cards {
   margin-top: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .card {
-  padding: 10px 0 0;
+  padding: 10px 0 50px;
   border-radius: 20px;
   max-width: 300px;
   width: 100%;
   background-color: #54acde;
+  height: 270px;
 }
 
 .card-label {
@@ -368,11 +367,16 @@ img {
 }
 
 .card-info {
+  height: 100%;
   padding: 20px 20px 30px;
   background-color: #21678e;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   color: white;
+}
+
+.card-desc {
+  padding: 30px;
 }
 
 input {
