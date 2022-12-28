@@ -1,5 +1,19 @@
-// const menu = document.querySelector(".menu");
-// const menuItems = document.querySelectorAll(".menuItem");
+// hamburger menu
+
+const cancelButton = document.querySelector('.cancel-btn');
+const hamburgerButton = document.querySelector('.header-hamburger');
+
+const menu = document.querySelector(".wrapper-left");
+const menuItems = document.querySelectorAll(".menu-item");
+
+hamburgerButton.addEventListener('click', ()=> {
+  menu.classList.add('show');
+})
+
+cancelButton.addEventListener('click', ()=> {
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
+})
 // const hamburger= document.querySelector(".hamburger");
 // const closeIcon= document.querySelector(".closeIcon");
 // const menuIcon = document.querySelector(".menuIcon");
@@ -60,27 +74,6 @@ function renderCards( title, description, price){
   card.append(cardLabel , cardInfo);
 
   return card;
-  // arr.map((card)=> {
-  //   const content = `
-  //     <div class="card">
-  //       <h2 class="card-label menu-title">Books</h2>
-  //       <div class="card-info">
-  //           <h3 class="card-title">
-  //               Umrning bir lahzasi!
-  //           </h3>
-  //           <p class="card-info">
-  //               Inson umir va hayot yo'liga bag'ishlanadi.
-  //           </p>
-  //           <p class="card-prize">
-  //               Price : <span>20000</span> so'm
-  //           </p>
-  //       </div>
-  //     </div>
-  //   `
-
-    
-  // })
-
 }
 
 const getCard = (books) => {
@@ -129,12 +122,17 @@ const filterMiddle = document.getElementById('middle');
 
 filterAll.addEventListener('click', ()=> {
   getCard(data);
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
 });
 
 filterExpensive.addEventListener('click', ()=> {
   let expensiveProducts = data.filter((book) =>
     book.status.includes('expensive')
   );
+
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
 
   getCard(expensiveProducts);
 })
@@ -143,6 +141,9 @@ filterCheep.addEventListener('click', ()=> {
   let cheapProducts = data.filter((book) =>
     book.status.includes('cheep')
   );
+
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
   getCard(cheapProducts);
 })
 
@@ -150,13 +151,14 @@ filterMiddle.addEventListener('click', ()=> {
   let cheapProducts = data.filter((book) =>
     book.status.includes('middle')
   );
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
   getCard(cheapProducts);
 });
 
 // Filter the books by its price
 
 const filterInput = document.querySelector('.filter-input');
-
 const minButton = document.querySelector('.min-button');
 const maxButton = document.querySelector('.max-button');
 
@@ -164,6 +166,8 @@ minButton.addEventListener('click', ()=> {
   let minPrice = data.filter((book) =>
     book.price < Number(filterInput.value)
   );
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
   
   getCard(minPrice);
 });
@@ -172,6 +176,8 @@ maxButton.addEventListener('click', ()=> {
   let maxPrice = data.filter((book) =>
     book.price > Number(filterInput.value)
   );
+  menu.classList.remove('show');
+  menu.classList.add('wrapper-left')
   if(maxPrice.length > 0){
     getCard(maxPrice);
   }else{
@@ -179,6 +185,9 @@ maxButton.addEventListener('click', ()=> {
     cards.innerHTML = `Unfortunately there is no any books more than this ${filterInput.value} so'm`
   }
 })
+
+
+
 
 
 

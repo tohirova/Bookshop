@@ -42,3 +42,36 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .wrapper-left-menu {
+        margin: 0;
+    }
+
+    .left-top {
+        margin: 0;
+    }
+
+    .wrapper-left-menu {
+        margin: 0;
+    }
+
+    .menu-title {
+        font-size: 20px !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 474px) {
+    /* place here CSS for when the screen is less than 1000px wide */
+
+    .wrapper-left {
+        padding-left: 100px;
+    }
+
+    
+}
